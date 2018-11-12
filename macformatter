@@ -1,0 +1,8 @@
+import re
+
+def macfor(inmac):
+    regex1 = re.sub(r'[^\w\w\w\w]', '',inmac)
+    regexupp = regex1.upper()
+    length = iter(regexupp)
+    MAC = ':'.join(a+b for a,b in zip(length,length))
+    return MAC
